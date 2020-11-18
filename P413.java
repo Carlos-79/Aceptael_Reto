@@ -3,17 +3,46 @@ import java.util.Scanner;
 public class P413 {
 
 	public static void main(String[] args) {
-		
 		Scanner teclado = new Scanner(System.in);
-		System.out.println("Dime un numero de losas claras");
-		int claras = teclado.nextInt();
-		System.out.println("Dime un numero de losas oscuras");
-		int oscuras = teclado.nextInt();
-		
-		while() {
-			
+
+		int casos;
+		int filas;
+		int columnas;
+		int blancas = 0;
+		int negras = 0;
+		double cantidad = 0;
+		double total;
+
+
+		casos = s.nextInt();
+
+		for(int i=0; i<casos; i++) {
+
+			filas = s.nextInt();
+			columnas = s.nextInt();
+
+			total = (double)filas * columnas;
+			cantidad = (double)total / 2;
+
+			blancas = (int)cantidad;
+			negras = (int)cantidad;
+
+			if(filas == 1 && columnas == 1) {
+
+				blancas = 1;
+				negras = 0;
+
+			} else if(total %2 != 0 ) {
+
+				blancas = (int)cantidad + 1;
+
+			}
+
+			System.out.print(blancas + " " + negras);
+			System.out.println();
+
 		}
-				
+
 
 	}
 
